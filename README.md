@@ -2,6 +2,8 @@
 
 This is a **MERN stack** authentication project where users can register, log in, and their details will be stored in the **MongoDB** database.  
 
+## 🌐 Live Preview  
+🔗 [Click Here](https://nirvannana.netlify.app/) 
 ---
 
 ## 🛠️ Tech Stack  
