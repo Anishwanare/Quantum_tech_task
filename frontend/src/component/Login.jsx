@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { login, register } from "../store/userSlice";
 
 const Login = ({ setLogin }) => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("anishwanare@gmail.com");
+    const [password, setPassword] = useState("123456789");
     const [name, setName] = useState("");
     const [dob, setDob] = useState("");
     const [showPass, setShowPass] = useState(false);
@@ -21,8 +21,10 @@ const Login = ({ setLogin }) => {
         formData.append("email", email);
         formData.append("password", password);
 
-        dispatch(login(formData));
-        setLogin(false);
+        const response = dispatch(login(formData));
+        response.then(() => {
+            setLogin(false);
+        })
     };
 
     const handleRegister = (e) => {
@@ -39,8 +41,10 @@ const Login = ({ setLogin }) => {
         formData.append("password", password);
         formData.append("dob", dob);
 
-        dispatch(register(formData));
-        setLogin(false);
+        const response = dispatch(register(formData));
+        response.then(() => {
+            setLogin(false);
+        })
     };
 
     return (
